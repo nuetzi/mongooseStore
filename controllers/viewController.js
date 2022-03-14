@@ -1,20 +1,20 @@
-const RESOURCE_PATH = '/products';
+const RESOURCE_PATH = "/products";
 
 const viewController = {
     index(req, res, next) {
-        res.render('Index', res.locals.data);
+        res.render("Index", res.locals.data);
     },
 
     show(req, res, next) {
-        res.render('Show', res.locals.data);
+        res.render("Show", res.locals.data);
     },
 
     edit(req, res, next) {
-        res.render('Edit', res.locals.data);
+        res.render("Edit", res.locals.data);
     },
 
     new(req, res, next) {
-        res.render('New', res.locals.data);
+        res.render("New", res.locals.data);
     },
 
     redirectHome(req, res, next) {
