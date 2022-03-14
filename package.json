@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-react-views": "^0.11.0",
+    "method-override": "^3.0.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "mongoosestore",
+  "description": "Per Scholas Project 2: Make a product inventory manager with full CRUD using Mongoose",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuetzi/mongooseStore.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nuetzi/mongooseStore/issues"
+  },
+  "homepage": "https://github.com/nuetzi/mongooseStore#readme"
+}
