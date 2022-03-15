@@ -9,7 +9,7 @@ class Edit extends React.Component{
                         Name: <input type="text" name="name" defaultValue={this.props.product.name}/><br/>
                         Description: <input type="text" name="description" defaultValue={this.props.product.description}/><br/>
                         Image: <input type="text" name="img" defaultValue={this.props.product.img}/><br/>
-                        Price: <input type="number" name="price" min="0" defaultValue={this.props.product.price}/><br/>
+                        Price: <input type="number" name="price" min="0" step="0.01" defaultValue={this.props.product.price}/><br/>
                         Quantity: <input type="number" name="qty" min="0" defaultValue={this.props.product.qty}/><br/>
                         <br/>
                         <br/>

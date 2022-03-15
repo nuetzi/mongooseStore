@@ -10,7 +10,7 @@ class Index extends React.Component {
                     {
                         this.props.products.map((product, i) => {
                             return <li key={i}>
-                                <h2>{product.name}</h2> <br/>
+                                <a href={`/products/${product.id}`}> <h2>{product.name}</h2> </a> <br/>
                                 <a href={`/products/${product.id}`}> <img src={product.img}/> </a> <br/>
                                 ${product.price} <br/>
                                 {product.qty} available <br/>
