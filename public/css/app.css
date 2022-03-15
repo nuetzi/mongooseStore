@@ -1,0 +1,9 @@
+.responsiveWidth {
+    width: 20%;
+    height: auto;
+}
+
+#itemDisplay {
+    align-items: center;
+    text-align: center;
+}
