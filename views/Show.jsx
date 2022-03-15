@@ -1,6 +1,11 @@
 const React = require("react");
 
 class Show extends React.Component {
+    purchase() {
+        this.props.product.qty--;
+        this.forceUpdate;
+    };
+
     render() {
         return (
             <div id="itemDisplay">
@@ -12,6 +17,11 @@ class Show extends React.Component {
                 { (this.props.product.qty > 0)
                     ? <text>{this.props.product.qty} available</text>
                     : <text>OUT OF STOCK</text>
+                } <br/>
+                <br/>
+                { (this.props.product.qty > 0)
+                    ? <button onClick={this.purchase.bind(this)}>BUY</button>
+                    : <text></text>
                 } <br/>
                 <br/>
                 <br/>
