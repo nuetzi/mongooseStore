@@ -5,16 +5,16 @@ const viewController = {
         res.render("Index", res.locals.data);
     },
 
+    new(req, res, next) {
+        res.render("New");
+    },
+
     show(req, res, next) {
         res.render("Show", res.locals.data);
     },
 
     edit(req, res, next) {
         res.render("Edit", res.locals.data);
-    },
-
-    new(req, res, next) {
-        res.render("New", res.locals.data);
     },
 
     redirectHome(req, res, next) {

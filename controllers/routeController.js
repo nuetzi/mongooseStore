@@ -7,6 +7,9 @@ const dataController = require("./dataController.js");
 // Index
 router.get("/", dataController.index, viewController.index);
 
+// New
+router.get("/new", viewController.new);
+
 // Delete
 router.delete("/:id", dataController.destroy, viewController.redirectHome);
 

@@ -12,25 +12,12 @@ const dataController = {
         });
     },
 
-    create(req, res, next) {
-        // Use Model to create Product Document
-        Product.create(req.body, (error, createdProduct) => {
-            // Once created - respond to client
+    destroy(req, res, next){
+        Product.findByIdAndRemove(req.params.id, (error, product) => {
             if(error) {
                 res.status(404).send({ msg: error.message });
             } else {
-                res.locals.data.product = createdProduct;
-                next();
-            };
-        });
-    },
-
-    show(req, res, next) {
-        Product.findById(req.params.id, (error, foundProduct) => {
-            if(error){
-                res.status(404).send({ msg: error.message });
-            } else {
-                res.locals.data.product = foundProduct;
+                res.locals.data.product = product;
                 next();
             };
         });
@@ -47,12 +34,23 @@ const dataController = {
         });
     },
 
-    destroy(req, res, next){
-        Product.findByIdAndRemove(req.params.id, (error, product) => {
+    create(req, res, next) {
+        Product.create(req.body, (error, createdProduct) => {
             if(error) {
                 res.status(404).send({ msg: error.message });
             } else {
-                res.locals.data.product = product;
+                res.locals.data.product = createdProduct;
+                next();
+            };
+        });
+    },
+
+    show(req, res, next) {
+        Product.findById(req.params.id, (error, foundProduct) => {
+            if(error){
+                res.status(404).send({ msg: error.message });
+            } else {
+                res.locals.data.product = foundProduct;
                 next();
             };
         });
