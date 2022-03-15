@@ -13,7 +13,10 @@ class Index extends React.Component {
                                 <a href={`/products/${product.id}`}> <h2>{product.name}</h2> </a> <br/>
                                 <a href={`/products/${product.id}`}> <img src={product.img}/> </a> <br/>
                                 ${product.price} <br/>
-                                {product.qty} available <br/>
+                                { (product.qty > 0)
+                                    ? <text>{product.qty} available</text>
+                                    : <text>OUT OF STOCK</text>
+                                } <br/>
                             </li>
                         })
                     }

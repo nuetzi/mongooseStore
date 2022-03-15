@@ -11,7 +11,7 @@ class Show extends React.Component {
                 ${this.props.product.price} <br/>
                 { (this.props.product.qty > 0)
                     ? <text>{this.props.product.qty} available</text>
-                    : <text>"OUT OF STOCK"</text>
+                    : <text>OUT OF STOCK</text>
                 } <br/>
             </div>
         );
