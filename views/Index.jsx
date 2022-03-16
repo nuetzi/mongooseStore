@@ -1,26 +1,26 @@
 const React = require("react");
 
 class Index extends React.Component {
-// I don't want this to remain as an unordered list
-// Rather than list items, I might return a div instead
     render() {
         return (
             <div>
             <link rel="stylesheet" href="/css/app.css"/>
                 <h1>Big Store</h1>
-                <ul>
+                    <div className="parentDiv">
                     {
                         this.props.products.map((product, i) => {
                             const { id, name, img, price, qty } = product;
-                            return <li key={i}>
-                                <a href={`/products/${id}`}> <h2>{name}</h2> </a> <br/>
-                                <a href={`/products/${id}`}> <img src={img} className="responsiveWidth"/> </a> <br/>
+                            return <div className="indexProduct" key={i}>
+                                <a href={`/products/${id}`}> <h2>{name}</h2> </a>
+                                <a href={`/products/${id}`}> <img src={img ? img : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"} className="responsiveSize"/> </a> <br/>
                                 {(price > 0) ? <text>${price}</text> : <text>FREE!</text>} <br/>
-                                {(qty > 0) ? <text>{qty} available</text> : <text>OUT OF STOCK</text>} <br/>
-                            </li>
+                                {(qty > 0) ? <text>{qty} available</text> : <text>OUT OF STOCK</text>}
+                            </div>
                         })
                     }
-                </ul>
+                    </div>
+                <br/>
+                <br/>
                 <nav>
                     <a href="/products/new">Add a New Product</a>
                 </nav>

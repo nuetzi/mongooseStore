@@ -8,7 +8,7 @@ class Show extends React.Component {
             <link rel="stylesheet" href="/css/app.css"/>
                 <h1>{name}</h1> <br/>
                 <h3>{description}</h3> <br/>
-                <img src={img} className="responsiveWidth"/> <br/>
+                <img src={img ? img : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"} className="responsiveWidth"/> <br/>
                 {(price > 0) ? <text>${price}</text> : <text>FREE!</text>} <br/>
                 {(qty > 0) 
                     ? <text>{qty} available <br/> <br/>

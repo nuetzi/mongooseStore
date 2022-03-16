@@ -1,6 +1,23 @@
-.responsiveWidth {
-    width: 20%;
-    height: auto;
+.parentDiv {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 50%;
+    row-gap: 5%;
+    justify-items: center;
+}
+
+.responsiveSize {
+    width: auto;
+    max-width: 300px;
+    height: 80%;
+    max-height: 300px;
+}
+
+.indexProduct {
+    height: 50%;
+    min-height: 200px;
+    max-height: 500px;
+    text-align: center;
 }
 
 #itemDisplay {
