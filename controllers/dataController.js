@@ -12,7 +12,7 @@ const dataController = {
         });
     },
 
-    destroy(req, res, next){
+    destroy(req, res, next) {
         Product.findByIdAndRemove(req.params.id, (error, product) => {
             if(error) {
                 res.status(404).send({ msg: error.message });
@@ -47,10 +47,21 @@ const dataController = {
 
     show(req, res, next) {
         Product.findById(req.params.id, (error, foundProduct) => {
-            if(error){
+            if(error) {
                 res.status(404).send({ msg: error.message });
             } else {
                 res.locals.data.product = foundProduct;
+                next();
+            };
+        });
+    },
+
+    buy(req, res, next) {
+        Product.findByIdAndUpdate(req.params.id, { $inc:{qty:(-1)} }, { new: true }, (error, boughtProduct) => {
+            if(error) {
+                res.status(404).send({ msg: error.message });
+            } else {
+                res.locals.data.product = boughtProduct;
                 next();
             };
         });

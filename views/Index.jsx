@@ -1,6 +1,8 @@
 const React = require("react");
 
 class Index extends React.Component {
+// I don't want this to remain as an unordered list
+// Rather than list items, I might return a div instead
     render() {
         return (
             <div>
@@ -12,7 +14,10 @@ class Index extends React.Component {
                             return <li key={i}>
                                 <a href={`/products/${product.id}`}> <h2>{product.name}</h2> </a> <br/>
                                 <a href={`/products/${product.id}`}> <img src={product.img} className="responsiveWidth"/> </a> <br/>
-                                ${product.price} <br/>
+                                { (product.price > 0)
+                                    ? <text>${product.price}</text>
+                                    : <text>FREE!</text>
+                                } <br/>
                                 { (product.qty > 0)
                                     ? <text>{product.qty} available</text>
                                     : <text>OUT OF STOCK</text>
