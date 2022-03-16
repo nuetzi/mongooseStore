@@ -13,7 +13,7 @@ class Show extends React.Component {
                 {(qty > 0) 
                     ? <text>{qty} available <br/> <br/>
                         <form action = {`/products/${_id}?_method=PATCH`}  method="POST">
-                            <input type="submit" value='BUY'/>
+                            <input type="submit" value="BUY"/>
                         </form></text>
                     : <text>OUT OF STOCK</text>
                 } <br/>
