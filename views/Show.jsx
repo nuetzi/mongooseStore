@@ -10,13 +10,12 @@ class Show extends React.Component {
                 <h3>{description}</h3> <br/>
                 <img src={img} className="responsiveWidth"/> <br/>
                 {(price > 0) ? <text>${price}</text> : <text>FREE!</text>} <br/>
-                {(qty > 0) ? <text>{qty} available</text> : <text>OUT OF STOCK</text>} <br/>
-                <br/>
-                {(qty > 0)
-                    ? <form action = {`/products/${_id}?_method=PATCH`}  method="POST">
-                        <input type="submit" value='BUY'/>
-                    </form>
-                    : <text></text>
+                {(qty > 0) 
+                    ? <text>{qty} available <br/> <br/>
+                        <form action = {`/products/${_id}?_method=PATCH`}  method="POST">
+                            <input type="submit" value='BUY'/>
+                        </form></text>
+                    : <text>OUT OF STOCK</text>
                 } <br/>
                 <br/>
                 <br/>
