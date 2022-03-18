@@ -6,7 +6,7 @@ class New extends React.Component {
             <body>
             <link rel="stylesheet" href="/css/app.css"/>
                 <h1>Add a New Product</h1>
-                <div class="alignLeft">
+                <div className="alignLeft">
                     <form action="/products" method="POST">
                         Name: <input type="text" name="name"/><br/>
                         Description: <input type="text" name="description"/><br/>
@@ -15,7 +15,7 @@ class New extends React.Component {
                         Quantity: <input type="number" name="qty" min="0"/><br/>
                         <br/>
                         <br/>
-                        <input type="submit" name="" value="Submit Product"/>
+                        <input type="submit" name="" value="SUBMIT"/>
                     </form>
                 </div>
             </body>
