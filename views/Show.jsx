@@ -8,7 +8,7 @@ class Show extends React.Component {
     render() {
         const { name, description, img, price, qty, _id } = this.props.product;
         return (
-            <div id="itemDisplay">
+            <div className="itemDisplay">
             <link rel="stylesheet" href="/css/app.css"/>
                 <h1>{name}</h1> <br/>
                 <h3>{description}</h3> <br/>
@@ -21,10 +21,9 @@ class Show extends React.Component {
                         </form></text>
                     : <text>OUT OF STOCK</text>
                 } <br/>
-                <br/>
-                <br/>
                 <a href="/products">Back</a> <br/>
-                {/* Still might try to turn EDIT into a button */}
+                <br/>
+                <br/>
                 <a href={`${_id}/edit`}>Edit Product</a> <br/>
                 <form action={`/products/${_id}?_method=DELETE`} method="POST">
                     <input type="submit" value="DELETE Product"/>

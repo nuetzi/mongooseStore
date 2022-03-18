@@ -5,12 +5,14 @@ class Index extends React.Component {
         return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     };
 
+    
+
     render() {
         return (
             <div>
             <link rel="stylesheet" href="/css/app.css"/>
                 <h1>Big Store</h1>
-                    <div className="parentDiv">
+                <div className="indexContainer">
                     {
                         this.props.products.map((product, i) => {
                             const { id, name, img, price, qty } = product;
@@ -22,11 +24,11 @@ class Index extends React.Component {
                             </div>
                         })
                     }
-                    </div>
+                </div>
                 <br/>
                 <br/>
                 <nav>
-                    <a href="/products/new">Add a New Product</a>
+                    <h4><a href="/products/new">Add a New Product</a></h4>
                 </nav>
             </div>
         );

@@ -5,7 +5,9 @@ class Edit extends React.Component{
         const { name, description, img, price, qty, _id } = this.props.product;
         return (
             <body>
-                <link rel="stylesheet" href="/css/app.css"/>      
+                <link rel="stylesheet" href="/css/app.css"/>
+                <h1>Edit Product Info</h1>
+                <div className="alignLeft">      
                     <form action={`/products/${_id}?_method=PUT`} method="POST">
                         Name: <input type="text" name="name" defaultValue={name}/><br/>
                         Description: <input type="text" name="description" defaultValue={description}/><br/>
@@ -16,6 +18,7 @@ class Edit extends React.Component{
                         <br/>
                         <input type="submit" value="Submit Changes"/>
                     </form>
+                </div>
             </body>
         );
     };
