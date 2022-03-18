@@ -13,6 +13,7 @@ Create a full CRUD app in Express with Mongoose and deploy to Heroku (Heroku lin
 - CSS3
 - JavaScript
 - Express.js
+- React.js
 - Mongoose / MongoDB
 - Heroku
 
