@@ -6,7 +6,7 @@
 ### This is the second project assigned from Per Scholas' Software Engineer course
 
 ## Objectives
-Create a full CRUD app in Express with Mongoose and deploy to Heroku [here] (https://nuetzistore.herokuapp.com/products).
+Create a full CRUD app in Express with Mongoose and deploy to Heroku (Heroku link: <https://nuetzistore.herokuapp.com/products>).
 
 ## Technologies Used:
 - HTML5
