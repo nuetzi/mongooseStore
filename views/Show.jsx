@@ -1,6 +1,10 @@
 const React = require("react");
 
 class Show extends React.Component {
+    numberWithCommas(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    };
+
     render() {
         const { name, description, img, price, qty, _id } = this.props.product;
         return (
@@ -8,10 +12,10 @@ class Show extends React.Component {
             <link rel="stylesheet" href="/css/app.css"/>
                 <h1>{name}</h1> <br/>
                 <h3>{description}</h3> <br/>
-                <img src={img ? img : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"} className="responsiveWidth"/> <br/>
-                {(price > 0) ? <text>${price}</text> : <text>FREE!</text>} <br/>
+                <img src={img ? img : "/images/noImage.jpg"} className="responsiveSize"/> <br/>
+                {(price > 0) ? <text>${this.numberWithCommas(parseFloat(price).toFixed(2))}</text> : <text>FREE!</text>} <br/>
                 {(qty > 0) 
-                    ? <text>{qty} available <br/> <br/>
+                    ? <text>{this.numberWithCommas(qty)} available <br/> <br/>
                         <form action = {`/products/${_id}?_method=PATCH`}  method="POST">
                             <input type="submit" value="BUY"/>
                         </form></text>

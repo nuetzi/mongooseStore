@@ -1,6 +1,10 @@
 const React = require("react");
 
 class Index extends React.Component {
+    numberWithCommas(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    };
+
     render() {
         return (
             <div>
@@ -12,9 +16,9 @@ class Index extends React.Component {
                             const { id, name, img, price, qty } = product;
                             return <div className="indexProduct" key={i}>
                                 <a href={`/products/${id}`}> <h2>{name}</h2> </a>
-                                <a href={`/products/${id}`}> <img src={img ? img : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"} className="responsiveSize"/> </a> <br/>
-                                {(price > 0) ? <text>${price}</text> : <text>FREE!</text>} <br/>
-                                {(qty > 0) ? <text>{qty} available</text> : <text>OUT OF STOCK</text>}
+                                <a href={`/products/${id}`}> <img src={img ? img : "/images/noImage.jpg"} className="responsiveSize"/> </a> <br/>
+                                {(price > 0) ? <text>${this.numberWithCommas(parseFloat(price).toFixed(2))}</text> : <text>FREE!</text>} <br/>
+                                {(qty > 0) ? <text>{this.numberWithCommas(qty)} available</text> : <text>OUT OF STOCK</text>}
                             </div>
                         })
                     }
