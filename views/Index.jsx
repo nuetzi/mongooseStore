@@ -9,7 +9,7 @@ class Index extends React.Component {
         return (
             <div>
             <link rel="stylesheet" href="/css/app.css"/>
-                <h1>Big Time Fun Store</h1>
+                <h1>Big Time Fun Store of Needful Things</h1>
                 <div className="indexContainer">
                     {
                         this.props.products.map((product, i) => {
