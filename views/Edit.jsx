@@ -20,6 +20,13 @@ class Edit extends React.Component{
                         <input type="submit" value="Submit Changes"/>
                     </form>
                 </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <a href="/products">Back</a>
             </body>
         );
     };

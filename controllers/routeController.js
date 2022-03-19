@@ -32,7 +32,7 @@ router.get("/:id", dataController.show, viewController.show);
 // contains the complete new version, whereas for the PATCH method, the request body
 // only needs to contain the specific changes to the resource,
 //specifically a set of instructions describing how that resource should be changed
-router.patch('/:id', dataController.buy, viewController.redirectHome);
+router.patch('/:id', dataController.buy, viewController.redirectShow);
 
 
 // Export router

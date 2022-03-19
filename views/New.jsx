@@ -19,6 +19,13 @@ class New extends React.Component {
                         <input type="submit" name="" value="SUBMIT"/>
                     </form>
                 </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <a href="/products">Back</a>
             </body>
         );
     };

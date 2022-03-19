@@ -22,6 +22,8 @@ class Show extends React.Component {
                             <input type="submit" value="BUY"/>
                         </form></text>
                     : <p style={{color:"red"}}>OUT OF STOCK</p>}</h5> <br/>
+                <br/>
+                <br/>    
                 <a href="/products">Back</a> <br/>
                 <br/>
                 <br/>
