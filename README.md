@@ -58,11 +58,20 @@ When the BUY button is pressed, it will make a request to update the qty of the 
 
 ## Required Installation
 1. Clone the repository and open a terminal in that directory (or cd to that directory form an existing terminal)
-2. In the terminal window, enter `npm install` to install Node modules
-3. Other packages 
-4. Set up database
-5. Create .env file
-6. Run `nodemon` in the terminal
-7. In your web browser, navigate to [http://localhost:3000/products](http://localhost:3000/products)
+2. In the terminal window, enter `npm install` to install Node modules. The dependencies can be found in the `package.json` file:
+   - `dotenv`
+   - `method-override`
+   - `mongoose`
+   - `express`
+   - `express-react-views`
+   - `react`
+   - `react-dom`
+3. Set up a database (for this assignment, I used MongoDB; their site has instructions on setting up)
+4. Create .env file for environmental variables. Most notably, this will include the access to your databse.
+5. Run `nodemon` in the terminal (be sure you are working in the main repository directory)
+6. In your web browser, navigate to [http://localhost:3000/products](http://localhost:3000/products), unless you are using a different port in your .env file (in which case, use that port # instead, obviously)
+7. This will allow you to view the app and any changes you choose to make in a local environment.
 
-(Future update will include a video [here]())
+----------------------------
+
+A brief video presentation of the app and its code can be found [here](https://youtu.be/X2M_YkhINhk).
