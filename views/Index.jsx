@@ -7,6 +7,8 @@ class Index extends React.Component {
 
     render() {
         return (
+            <body>
+            <title>Big Time Fun Store of Needful Things</title>
             <div>
             <link rel="stylesheet" href="/css/app.css"/>
                 <h1>Big Time Fun Store of Needful Things</h1>
@@ -29,6 +31,7 @@ class Index extends React.Component {
                     <h4><a href="/products/new">Add a New Product</a></h4>
                 </nav>
             </div>
+            </body>
         );
     };
 };

@@ -8,9 +8,11 @@ class Show extends React.Component {
     render() {
         const { name, description, img, price, qty, _id } = this.props.product;
         return (
+            <body>
+            <title>{name}</title>
             <div className="itemDisplay">
             <link rel="stylesheet" href="/css/app.css"/>
-                <h1>{name} </h1> <br/>
+                <h1>{name}</h1> <br/>
                 <h3>{description}</h3>
                 <img src={img ? img : "/images/noImage.jpg"} className="responsiveSize"/>
                 <h4>{(price > 0) ? `$${this.numberWithCommas(parseFloat(price).toFixed(2))}` : <p style={{color:"green"}}>FREE!</p>}</h4>
@@ -28,6 +30,7 @@ class Show extends React.Component {
                     <input type="submit" value="DELETE Product"/>
                 </form>
             </div>
+            </body>
         );
     };
 };

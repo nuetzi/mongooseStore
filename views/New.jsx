@@ -4,6 +4,7 @@ class New extends React.Component {
     render() {
         return (
             <body>
+            <title>Add a New Product</title>
             <link rel="stylesheet" href="/css/app.css"/>
                 <h1>Add a New Product</h1>
                 <div className="alignLeft">

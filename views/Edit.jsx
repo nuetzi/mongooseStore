@@ -5,6 +5,7 @@ class Edit extends React.Component{
         const { name, description, img, price, qty, _id } = this.props.product;
         return (
             <body>
+                <title>Edit Product Info</title>
                 <link rel="stylesheet" href="/css/app.css"/>
                 <h1>Edit Product Info</h1>
                 <div className="alignLeft">      
