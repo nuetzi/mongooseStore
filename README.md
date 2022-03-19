@@ -74,4 +74,4 @@ When the BUY button is pressed, it will make a request to update the qty of the 
 
 ----------------------------
 
-A brief video presentation of the app and its code can be found [here](https://youtu.be/X2M_YkhINhk).
+A brief video presentation of the app and its code can be found [here](https://youtu.be/Kq2gmigWYow).
